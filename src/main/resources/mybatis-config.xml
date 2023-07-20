@@ -28,10 +28,10 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
 
-    <plugins>
-        <!--配置分页插件-->
+    <!--<plugins>
+        &lt;!&ndash;配置分页插件&ndash;&gt;
         <plugin interceptor="com.github.pagehelper.PageInterceptor"/>
-    </plugins>
+    </plugins>-->
 
     <!--引入映射文件-->
 <!--    <mappers>-->

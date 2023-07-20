@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>猫眼电影 - 娱乐看猫眼</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet"
+          href="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/common.2a536dd1.css"/>
+    <link rel="stylesheet"
+          href="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/home-index.fce66dcb.css"/>
+    <script crossorigin="anonymous"
+            src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/stat.b4e55d45.js"></script>
+    <script>if (window.devicePixelRatio >= 2) {
+        document.write('<link rel="stylesheet" href="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image-2x.8ba7074d.css"/>')
+    }</script>
+
+</head>
+<body>
+
+<!--顶部导航栏---------------------------------------------------------------------------------------------------------->
+<div class="header">
+    <div class="header-inner">
+        <h1><a href="//www.maoyan.com" class="logo" data-act="icon-click">猫眼电影</a></h1>
+        <div class="city-container" data-val="{currentcityid:187 }">
+            <div class="city-selected">
+                <div class="city-name">
+                    绍兴
+                    <span class="caret"></span>
+                </div>
+            </div>
+            <div class="city-list" data-val="{ localcityid: 187 }">
+                <div class="city-list-header">定位城市：<a class="js-geo-city" data-ci="187">绍兴</a></div>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div><a href="/" data-act="home-click" class="active">首页</a></div>
+            <div><a href="/films" data-act="movies-click">电影</a></div>
+            <div><a href="/cinemas" data-act="cinemas-click">影院</a></div>
+            <div><a href="http://www.gewara.com">演出</a></div>
+            <div><a href="/board" data-act="board-click">榜单</a></div>
+            <div><a href="/news" data-act="hotNews-click">热点</a></div>
+            <div><a href="/edimall">商城</a></div>
+        </div>
+
+        <div class="user-info">
+            <div class="user-avatar has-login">
+                <img src="https://img.meituan.net/maoyanuser/9526baab5c5d69e613cb870976ad337811752.png">
+                <span class="caret"></span>
+                <ul class="user-menu yes-login-menu">
+                    <li class="text"><a href="/profile/orders">我的订单</a></li>
+                    <li class="text login-name" title="bbv648405421"><a href="javascript:void 0">基本信息</a></li>
+                    <li class="text"><a href="javascript:void 0" class="J-logout" data-act="logout-click">退出登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <form action="/query" target="_blank" class="search-form" data-actform="search-click">
+            <input name="kw" class="search" type="search" maxlength="32" placeholder="找影视剧、影人、影院"
+                   autocomplete="off">
+            <input class="submit" type="submit" value="">
+        </form>
+
+        <div class="app-download">
+            <a href="/app" target="_blank">
+                <span class="iphone-icon"></span>
+                <span class="apptext">APP下载</span>
+                <span class="caret"></span>
+                <div class="download-icon">
+                    <p class="down-title">扫码下载APP</p>
+                    <p class='down-content'>选座更优惠</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+<div class="header-placeholder"></div>
+
+<!--底下内容------------------------------------------------------------------------------------------------------------>
+<div class="container" id="app">
+    <div class="content">
+
+        <!--侧边------------------------------------------------------------------------------------------------------->
+        <div class="aside">
+
+            <!--今日票房-->
+            <div class="ranking-box-wrapper">
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-title">
+                            <span class="textcolor_red"><h2>今日票房</h2></span>
+                        </span>
+                    </div>
+                    <div class="panel-content">
+                        <ul class="ranking-wrapper ranking-box">
+
+                            <li class="ranking-item ranking-top ranking-index-1">
+                                <a href="/films/1475137" target="_blank" data-act="ticketList-movie-click"
+                                   data-val="{movieid:1475137}">
+                                    <div class="ranking-top-left">
+                                        <i class="ranking-top-icon"></i>
+                                        <img class="ranking-img  default-img"
+                                             data-src="https://p0.pipi.cn/friday/c4b845122b4df91afe755719c995876b.jpg?imageView2/1/w/120/h/80"
+                                             alt="长安三万里电影海报"/>
+                                    </div>
+                                    <div class="ranking-top-right">
+                                        <div class="ranking-top-right-main">
+                                            <span class="ranking-top-moive-name">长安三万里</span>
+
+
+                                            <p class="ranking-top-wish">
+                                                <span class="stonefont">111.1</span>万
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-2">
+                                <a href="/films/1413252" target="_blank" data-act="ticketList-movie-click"
+                                   data-val="{movieid:1413252}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">2</i>
+                                        <span class="ranking-movie-name">八角笼中</span>
+
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xecdc;&#xe99c;&#xe9ea;&#xf7ff;.&#xe99c;&#xf726;</span>万
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-3">
+                                <a href="/films/1259921" target="_blank" data-act="ticketList-movie-click"
+                                   data-val="{movieid:1259921}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">3</i>
+                                        <span class="ranking-movie-name">碟中谍7：致命清算（上）</span>
+
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xf85e;&#xe9ea;&#xecdc;&#xf726;.&#xe8d7;&#xf726;</span>万
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-4">
+                                <a href="/films/1452790" target="_blank" data-act="ticketList-movie-click"
+                                   data-val="{movieid:1452790}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">4</i>
+                                        <span class="ranking-movie-name">消失的她</span>
+
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xf85e;&#xe9ea;&#xf726;&#xe8d7;.&#xe8ee;&#xe8ee;</span>万
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-5">
+                                <a href="/films/1431907" target="_blank" data-act="ticketList-movie-click"
+                                   data-val="{movieid:1431907}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">5</i>
+                                        <span class="ranking-movie-name">茶啊二中</span>
+
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xf85e;&#xf1fc;&#xe9ea;&#xeb92;.&#xe8d7;&#xe8ee;</span>万
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--今日大盘-->
+            <div class="box-total-wrapper clearfix">
+                <h3>今日大盘</h3>
+                <div>
+                    <p>
+                        <span class="num"><span class="stonefont">&#xf85e;.&#xf1fc;&#xecdc;</span></span>亿
+                        <a class="more" target="_blank" data-act="moreDayTip-click" href="https://piaofang.maoyan.com/">查看更多
+                            <span class="panel-arrow panel-arrow-red"></span></a>
+                    </p>
+                    <p class="meta-info">
+                        北京时间 22:10:03
+                        <span class="pull-right">猫眼专业版实时票房数据</span>
+                    </p>
+                </div>
+            </div>
+
+            <!--最受期待-->
+            <div class="most-expect-wrapper">
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-more">
+                            <a href="/board/6" class="textcolor_orange" data-act="all-mostExpect-click">
+                                <span>查看完整榜单</span>
+                            </a>
+                            <span class="panel-arrow panel-arrow-orange"></span>
+                        </span>
+                        <span class="panel-title">
+                            <span class="textcolor_orange"><h2>最受期待</h2></span>
+                        </span>
+                    </div>
+                    <div class="panel-content">
+                        <ul class="ranking-wrapper ranking-mostExpect">
+                            <li class="ranking-item ranking-top ranking-index-1">
+                                <a href="/films/1374349" target="_blank" data-act="mostExpect-movie-click"
+                                   data-val="{movieid:1374349}">
+                                    <div class="ranking-top-left">
+                                        <i class="ranking-top-icon"></i>
+                                        <img class="ranking-img  default-img"
+                                             data-src="https://p0.pipi.cn/mmdb/fb7386d702f0fa16bd2c95b058796c9b243d2.jpg?imageView2/1/w/140/h/194"
+                                             alt="孤注一掷电影海报"/>
+                                    </div>
+                                    <div class="ranking-top-right">
+                                        <div class="ranking-top-right-main">
+                                            <span class="ranking-top-moive-name">孤注一掷</span>
+                                            <p class="ranking-release-time">上映时间：2023-08-11</p>
+                                            <p class="ranking-top-wish">
+                                                <span class="stonefont">&#xe8ee;&#xe99c;&#xe8ee;&#xf7ff;&#xeb92;&#xecdc;</span>人想看
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-2">
+                                <a href="/films/1439161" target="_blank" data-act="mostExpect-movie-click"
+                                   data-val="{movieid:1439161}">
+                                    <i class="ranking-index">2</i>
+                                    <span class="img-link">
+                                        <img class="ranking-img default-img"
+                                             src="https://p0.pipi.cn/friday/b135df860267a1aaef09ba64c02a76a5.jpg?imageView2/1/w/170/h/118"
+                                             alt="热烈电影海报"/>
+                                    </span>
+                                    <div class="name-link ranking-movie-name">热烈</div>
+                                    <span class="ranking-num-info">
+                                        <span class="stonefont">&#xecdc;&#xf85e;&#xf7ff;&#xeb92;&#xe99c;&#xe99c;</span>人想看
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-3">
+                                <a href="/films/1301416" target="_blank" data-act="mostExpect-movie-click"
+                                   data-val="{movieid:1301416}">
+                                    <i class="ranking-index">3</i>
+                                    <span class="img-link">
+                                        <img class="ranking-img default-img"
+                                             src="https://p0.pipi.cn/friday/f8d325acc4ac2e55c140dda77c925840.jpeg?imageView2/1/w/170/h/118"
+                                             alt="巨齿鲨2：深渊电影海报"/>
+                                    </span>
+                                    <div class="name-link ranking-movie-name">巨齿鲨2：深渊</div>
+                                    <span class="ranking-num-info">
+                                        <span class="stonefont">&#xecdc;&#xe8ee;&#xf85e;&#xe8ee;&#xeb92;&#xf1fc;</span>人想看
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-4">
+                                <a href="/films/346288" target="_blank" data-act="mostExpect-movie-click"
+                                   data-val="{movieid:346288}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">4</i>
+                                        <span class="ranking-movie-name">封神第一部</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xe8d7;&#xf1fc;&#xe99c;&#xf726;&#xe99c;&#xf7ff;</span>人想看
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-5">
+                                <a href="/films/1368677" target="_blank" data-act="mostExpect-movie-click"
+                                   data-val="{movieid:1368677}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">5</i>
+                                        <span class="ranking-movie-name">超能一家人</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xf85e;&#xf726;&#xf85e;&#xe8d7;&#xecdc;&#xf7ff;&#xf1fc;</span>人想看
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-6">
+                                <a href="/films/344942" target="_blank" data-act="mostExpect-movie-click"
+                                   data-val="{movieid:344942}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">6</i>
+                                        <span class="ranking-movie-name">芭比</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xf85e;&#xf726;&#xf726;&#xe99c;&#xf1fc;&#xf7ff;</span>人想看
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-7">
+                                <a href="/films/1448795" target="_blank" data-act="mostExpect-movie-click"
+                                   data-val="{movieid:1448795}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">7</i>
+                                        <span class="ranking-movie-name">最遗憾是错过你</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xf1fc;&#xf85e;&#xf726;&#xe8ee;&#xe9ea;</span>人想看
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-8">
+                                <a href="/films/1398840" target="_blank" data-act="mostExpect-movie-click"
+                                   data-val="{movieid:1398840}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">8</i>
+                                        <span class="ranking-movie-name">学爸</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xf85e;&#xe8d7;&#xf7ff;&#xf7ff;&#xe8ee;&#xf1fc;</span>人想看
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-9">
+                                <a href="/films/1405256" target="_blank" data-act="mostExpect-movie-click"
+                                   data-val="{movieid:1405256}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">9</i>
+                                        <span class="ranking-movie-name">前任4：英年早婚</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xe9ea;&#xeb92;&#xe9ea;&#xf7ff;&#xe9ea;&#xf85e;</span>人想看
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-10">
+                                <a href="/films/1384453" target="_blank" data-act="mostExpect-movie-click"
+                                   data-val="{movieid:1384453}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">10</i>
+                                        <span class="ranking-movie-name">透明侠侣</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xecdc;&#xe8d7;&#xe9ea;&#xf1fc;&#xecdc;</span>人想看
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--TOP100-->
+            <div class="top100-wrapper">
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-more">
+                            <a href="/board/4" class="textcolor_orange" data-act="all-TOP100-click">
+                                <span>查看完整榜单</span>
+                            </a>
+                            <span class="panel-arrow panel-arrow-orange"></span>
+                        </span>
+                        <span class="panel-title">
+                            <span class="textcolor_orange"><h2>TOP 100</h2></span>
+                        </span>
+                    </div>
+                    <div class="panel-content">
+                        <ul class="ranking-wrapper ranking-top100">
+                            <li class="ranking-item ranking-top ranking-index-1">
+                                <a href="/films/1200486" target="_blank" data-act="TOP100-movie-click"
+                                   data-val="{movieid:1200486}">
+                                    <div class="ranking-top-left">
+                                        <i class="ranking-top-icon"></i>
+                                        <img class="ranking-img  default-img"
+                                             data-src="https://p0.meituan.net/movie/574c998b534c4354e46e8c0cf89ca76037249.jpg@120w_80h_1e_1c"
+                                             alt="我不是药神电影海报"/>
+                                    </div>
+                                    <div class="ranking-top-right">
+                                        <div class="ranking-top-right-main">
+                                            <span class="ranking-top-moive-name">我不是药神</span>
+                                            <p class="ranking-top-wish">
+                                                <span class="stonefont">&#xe9ea;.&#xf7ff;</span>分
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-2">
+                                <a href="/films/1297" target="_blank" data-act="TOP100-movie-click"
+                                   data-val="{movieid:1297}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">2</i>
+                                        <span class="ranking-movie-name">肖申克的救赎</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xe9ea;.&#xecdc;</span>分
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-3">
+                                <a href="/films/1292" target="_blank" data-act="TOP100-movie-click"
+                                   data-val="{movieid:1292}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">3</i>
+                                        <span class="ranking-movie-name">海上钢琴师</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xe9ea;.&#xe8d7;</span>分
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-4">
+                                <a href="/films/1206605" target="_blank" data-act="TOP100-movie-click"
+                                   data-val="{movieid:1206605}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">4</i>
+                                        <span class="ranking-movie-name">绿皮书</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xe9ea;.&#xecdc;</span>分
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-5">
+                                <a href="/films/1203" target="_blank" data-act="TOP100-movie-click"
+                                   data-val="{movieid:1203}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">5</i>
+                                        <span class="ranking-movie-name">霸王别姬</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xe9ea;.&#xe8ee;</span>分
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-6">
+                                <a href="/films/1303" target="_blank" data-act="TOP100-movie-click"
+                                   data-val="{movieid:1303}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">6</i>
+                                        <span class="ranking-movie-name">美丽人生</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xe9ea;.&#xe8d7;</span>分
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-7">
+                                <a href="/films/4055" target="_blank" data-act="TOP100-movie-click"
+                                   data-val="{movieid:4055}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">7</i>
+                                        <span class="ranking-movie-name">这个杀手不太冷</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xe9ea;.&#xe8ee;</span>分
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-8">
+                                <a href="/films/1216365" target="_blank" data-act="TOP100-movie-click"
+                                   data-val="{movieid:1216365}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">8</i>
+                                        <span class="ranking-movie-name">小偷家族</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xf1fc;.&#xf85e;</span>分
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-9">
+                                <a href="/films/1211270" target="_blank" data-act="TOP100-movie-click"
+                                   data-val="{movieid:1211270}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">9</i>
+                                        <span class="ranking-movie-name">哪吒之魔童降世</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xe9ea;.&#xf7ff;</span>分
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ranking-item ranking-index-10">
+                                <a href="/films/46818" target="_blank" data-act="TOP100-movie-click"
+                                   data-val="{movieid:46818}">
+                                    <span class="normal-link">
+                                        <i class="ranking-index">10</i>
+                                        <span class="ranking-movie-name">怦然心动</span>
+                                        <span class="ranking-num-info">
+                                            <span class="stonefont">&#xf1fc;.&#xe9ea;</span>分
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--热门影人-->
+            <div class="popular-container">
+                <h2 class="red">热门影人</h2>
+                <ul>
+                    <li class="top1-list">
+                        <div>
+                            <div class="top-info-thumb">
+                                <a href="/films/celebrity/28106" target="_blank">
+                                    <img src="https://p0.meituan.net/movie/920dc38589ac2a0b5ac6b8d5ec15487421580.jpg@120w_72h_1e_1c"
+                                         alt="">
+                                    <i class="ranking top-info-icon red-bg">1</i>
+                                </a>
+                            </div>
+                            <p class="top1-news-content">
+                                <a href="/films/celebrity/28106" class="two-line" title="" target="_blank">
+                                    黄渤
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking red">2</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/celebrity/29561" target="_blank">夏雨</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking red">3</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/celebrity/128766" target="_blank">张琪</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">4</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/celebrity/28983" target="_blank">王宝强</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">5</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/celebrity/16647" target="_blank">范明</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">6</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/celebrity/28910" target="_blank">汤姆·克鲁斯</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">7</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/celebrity/355704" target="_blank">史彭元</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">8</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/celebrity/19037" target="_blank">朱一龙</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">9</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/celebrity/4035" target="_blank">费翔</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">10</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/celebrity/28904" target="_blank">王迅</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!--娱乐热点-->
+            <div class="popular-container">
+                <h2 class="red">娱乐热点</h2>
+                <ul>
+                    <li class="top1-list">
+                        <div>
+                            <div class="top-info-thumb">
+                                <a href="/films/news/14762507" target="_blank" data-act="news-click"
+                                   data-val="{newsid:14762507}">
+                                    <img src="https://p0.pipi.cn/friday/cf9273489a360e43b11f4918d1c40a3d.jpg?imageView2/1/w/120/h/72"
+                                         alt="">
+                                    <i class="ranking top-info-icon red-bg">1</i>
+                                </a>
+                            </div>
+                            <p class="top1-news-content">
+                                <a href="/films/news/14762507" class="two-line"
+                                   title="电影《武神赵子龙》爱奇艺正在热播，杜宇航、邱意浓谱写乱世恩仇" target="_blank"
+                                   data-act="news-click" data-val="{newsid:14762507}">
+                                    电影《武神赵子龙》爱奇艺正在热播，杜宇航、邱意浓谱写乱世恩仇
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking red">2</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/news/14867536" target="_blank" data-act="news-click"
+                                       data-val="{newsid:14867536}">二哈抓捕行动提上日程！《王牌二哈》8月19日欢乐上映！</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking red">3</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/news/14627628" target="_blank" data-act="news-click"
+                                       data-val="{newsid:14627628}">《碟中谍7：致命清算（上）》实拍特技“太生猛”
+                                        爽感超刺激</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">4</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/news/14637580" target="_blank" data-act="news-click"
+                                       data-val="{newsid:14637580}">生命张力拉满！《雪豹和她的朋友们》野性来袭</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">5</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/news/14877448" target="_blank" data-act="news-click"
+                                       data-val="{newsid:14877448}">电影《芭比》预售全面开启，梦幻乐园粉红派对引爆盛夏狂欢</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">6</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/news/14772574" target="_blank" data-act="news-click"
+                                       data-val="{newsid:14772574}">《封神第一部》发布视效特辑，揭秘视效制作让中国神话想象力落地</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">7</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/news/14687661" target="_blank" data-act="news-click"
+                                       data-val="{newsid:14687661}">电影《热烈》“生机bobo”特辑曝光 师徒齐心为爱逐梦</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">8</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/news/14872562" target="_blank" data-act="news-click"
+                                       data-val="{newsid:14872562}">抗美援朝剧《侦察英雄》杀青
+                                        罗晋马思纯实地拍摄再现志愿军风采</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">9</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/news/14672451" target="_blank" data-act="news-click"
+                                       data-val="{newsid:14672451}">《碟中谍7：致命清算（上）》热映中 体育群星热血联动</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="normal-link">
+                                <i class="ranking ">10</i>
+                                <p class="top10-news-content">
+                                    <a href="/films/news/14577513" target="_blank" data-act="news-click"
+                                       data-val="{newsid:14577513}">东北人的骄傲！ 爆笑电影《茶啊二中》破亿</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--中间------------------------------------------------------------------------------------------------------->
+        <div class="main">
+            <div class="movie-grid">
+
+                <!--正在热映-->
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-more">
+                            <a href="/films?showType=1" class="textcolor_red" data-act="all-playingMovie-click">
+                                <span>全部</span>
+                            </a>
+                            <span class="panel-arrow panel-arrow-red"></span>
+                        </span>
+                        <span class="panel-title">
+                            <span class="textcolor_red"><h2>正在热映（22部）</h2></span>
+                        </span>
+                    </div>
+                    <div class="panel-content">
+                        <dl class="movie-list">
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1413252" target="_blank" data-act="playingMovie-click"
+                                       data-val="{movieid:1413252}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb73867106d8079257f2aa6c2aa3f22e9365a.jpg?imageView2/1/w/160/h/220"
+                                                 alt="八角笼中电影海报"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">9.</i><i class="fraction">5</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="八角笼中">八角笼中
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="/cinemas?movieId=1413252"
+                                           class="active" target="_blank" data-act="salePlayingMovie-click"
+                                           data-val="{movieid:1413252}">购 票</a>
+                                    </div>
+                                    <div class="movie-ver"><i class="imax2d"></i></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1475137" target="_blank" data-act="playingMovie-click"
+                                       data-val="{movieid:1475137}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386d73390fa11e58ea39667b24f306b388.jpg?imageView2/1/w/160/h/220"
+                                                 alt="长安三万里电影海报"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">9.</i><i class="fraction">4</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="长安三万里">长安三万里
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="/cinemas?movieId=1475137"
+                                           class="active" target="_blank" data-act="salePlayingMovie-click"
+                                           data-val="{movieid:1475137}">购 票</a>
+                                    </div>
+                                    <div class="movie-ver"><i class="imax2d"></i></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/346288" target="_blank" data-act="playingMovie-click"
+                                       data-val="{movieid:346288}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386d72ff51b02ff2c951bd454679d0d66d.jpg?imageView2/1/w/160/h/220"
+                                                 alt="封神第一部电影海报"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">9.</i><i class="fraction">4</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="封神第一部">封神第一部
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="/cinemas?movieId=346288"
+                                           class="active" target="_blank" data-act="salePlayingMovie-click"
+                                           data-val="{movieid:346288}">购 票</a>
+                                    </div>
+                                    <div class="movie-ver"><i class="imax2d"></i></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1259921" target="_blank" data-act="playingMovie-click"
+                                       data-val="{movieid:1259921}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386d7923ddd67cb80773112b68457d8aea.jpg?imageView2/1/w/160/h/220"
+                                                 alt="碟中谍7：致命清算（上）电影海报"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">9.</i><i class="fraction">3</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="碟中谍7：致命清算（上）">碟中谍7：致命清算（上）
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="/cinemas?movieId=1259921"
+                                           class="active" target="_blank" data-act="salePlayingMovie-click"
+                                           data-val="{movieid:1259921}">购 票</a>
+                                    </div>
+                                    <div class="movie-ver"><i class="imax2d"></i></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1452790" target="_blank" data-act="playingMovie-click"
+                                       data-val="{movieid:1452790}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb738671537c69e5bc02ff9ad5c95aa31a703.jpg?imageView2/1/w/160/h/220"
+                                                 alt="消失的她电影海报"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">9.</i><i class="fraction">2</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="消失的她">消失的她
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="/cinemas?movieId=1452790"
+                                           class="active" target="_blank" data-act="salePlayingMovie-click"
+                                           data-val="{movieid:1452790}">购 票</a>
+                                    </div>
+                                    <div class="movie-ver"><i class="imax2d"></i></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1431907" target="_blank" data-act="playingMovie-click"
+                                       data-val="{movieid:1431907}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386d7338ddd3139f0eefb73d17c1a581b3.jpg?imageView2/1/w/160/h/220"
+                                                 alt="茶啊二中电影海报"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">9.</i><i class="fraction">4</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="茶啊二中">茶啊二中
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="/cinemas?movieId=1431907"
+                                           class="active" target="_blank" data-act="salePlayingMovie-click"
+                                           data-val="{movieid:1431907}">购 票</a>
+                                    </div>
+                                    <div class="movie-ver"></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1324999" target="_blank" data-act="playingMovie-click"
+                                       data-val="{movieid:1324999}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386718eaf2a7df516bd1ef3331075e5510.jpg?imageView2/1/w/160/h/220"
+                                                 alt="扫毒3：人在天涯电影海报"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">9.</i><i class="fraction">0</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="扫毒3：人在天涯">扫毒3：人在天涯
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="/cinemas?movieId=1324999"
+                                           class="active" target="_blank" data-act="salePlayingMovie-click"
+                                           data-val="{movieid:1324999}">购 票</a>
+                                    </div>
+                                    <div class="movie-ver"><i class="imax2d"></i></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1368677" target="_blank" data-act="playingMovie-click"
+                                       data-val="{movieid:1368677}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386712c9923e7aa9ab42e5772eff892245.jpg?imageView2/1/w/160/h/220"
+                                                 alt="超能一家人电影海报"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-title"
+                                                         title="超能一家人">超能一家人
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-detail-strong movie-sale">
+                                        <a href="/cinemas?movieId=1368677"
+                                           class="active" target="_blank" data-act="salePlayingMovie-click"
+                                           data-val="{movieid:1368677}">购 票</a>
+                                    </div>
+                                    <div class="movie-ver"><i class="imax2d"></i></div>
+                                </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <!--即将上映-->
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-more">
+                            <a href="/films?showType=2" class="textcolor_blue" data-act="all-upcomingMovie-click">
+                                <span>全部</span>
+                            </a>
+                            <span class="panel-arrow panel-arrow-blue"></span>
+                        </span>
+                        <span class="panel-title">
+                            <span class="textcolor_blue"><h2>即将上映（112部）</h2></span>
+                        </span>
+                    </div>
+                    <div class="panel-content">
+                        <dl class="movie-list">
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/346288" target="_blank" data-act="upcomingMovie-click"
+                                       data-val="{movieid:346288}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386d72ff51b02ff2c951bd454679d0d66d.jpg?imageView2/1/w/160/h/220"
+                                                 alt="封神第一部海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="封神第一部">封神第一部
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-wish">
+                                        <span class="stonefont">&#xe8d7;&#xf1fc;&#xe99c;&#xf726;&#xe99c;&#xf7ff;</span>人想看
+                                    </div>
+                                    <div class="movie-detail movie-detail-strong movie-presale">
+                                        <a class="movie-presale-sep">预告片</a><a href="/cinemas?movieId=346288"
+                                               class="active" target="_blank" data-act="presaleUpcomingMovie-click"
+                                               data-val="{movieid:346288}">预 售</a>
+                                    </div>
+                                    <div class="movie-ver"><i class="imax2d"></i></div>
+                                </div>
+                                <div class="movie-detail movie-rt">7月20日上映</div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1368677" target="_blank" data-act="upcomingMovie-click"
+                                       data-val="{movieid:1368677}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386712c9923e7aa9ab42e5772eff892245.jpg?imageView2/1/w/160/h/220"
+                                                 alt="超能一家人海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-title"
+                                                         title="超能一家人">超能一家人
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-wish">
+                                        <span class="stonefont">&#xf85e;&#xf726;&#xf85e;&#xe8d7;&#xecdc;&#xf7ff;&#xf1fc;</span>人想看
+                                    </div>
+                                    <div class="movie-detail movie-detail-strong movie-presale">
+                                        <a class="movie-presale-sep">预告片</a><a href="/cinemas?movieId=1368677"
+                                               class="active" target="_blank" data-act="presaleUpcomingMovie-click"
+                                               data-val="{movieid:1368677}">预 售</a>
+                                    </div>
+                                    <div class="movie-ver"><i class="imax2d"></i></div>
+                                </div>
+                                <div class="movie-detail movie-rt">7月21日上映</div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/344942" target="_blank" data-act="upcomingMovie-click"
+                                       data-val="{movieid:344942}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb738671f2a807b5359235b0ad9aa6753fa39.jpg?imageView2/1/w/160/h/220"
+                                                 alt="芭比海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-title"
+                                                         title="芭比">芭比
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-wish">
+                                        <span class="stonefont">&#xf85e;&#xf726;&#xf726;&#xe99c;&#xf1fc;&#xf7ff;</span>人想看
+                                    </div>
+                                    <div class="movie-detail movie-detail-strong movie-presale">
+                                        <a class="movie-presale-sep">预告片
+                                        </a><a href="/cinemas?movieId=344942"
+                                               class="active" target="_blank" data-act="presaleUpcomingMovie-click"
+                                               data-val="{movieid:344942}">预 售</a>
+                                    </div>
+                                    <div class="movie-ver"></div>
+                                </div>
+                                <div class="movie-detail movie-rt">7月21日上映</div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1500500" target="_blank" data-act="upcomingMovie-click"
+                                       data-val="{movieid:1500500}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386717a3ddd9257af33e59a29b1895f6e0.jpg?imageView2/1/w/160/h/220"
+                                                 alt="萌鼠大冒险海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-title"
+                                                         title="萌鼠大冒险">萌鼠大冒险
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-wish">
+                                        <span class="stonefont">&#xf85e;&#xf1fc;&#xf7ff;&#xecdc;</span>人想看
+                                    </div>
+                                    <div class="movie-detail movie-detail-strong movie-presale">
+                                        <a class="movie-presale-sep">预告片
+                                        </a><a data-act="presaleUpcomingMovie-click" data-val="{movieid:1500500}">预
+                                        售</a>
+                                    </div>
+                                    <div class="movie-ver"></div>
+                                </div>
+                                <div class="movie-detail movie-rt">7月21日上映</div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1302980" target="_blank" data-act="upcomingMovie-click"
+                                       data-val="{movieid:1302980}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386d7d7c5bf338fc9fd264ca93058af63e.jpg?imageView2/1/w/160/h/220"
+                                                 alt="百变马丁：怪兽大作战海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-title"
+                                                         title="百变马丁：怪兽大作战">百变马丁：怪兽大作战
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-wish">
+                                        <span class="stonefont">&#xe99c;&#xf1fc;&#xf7ff;&#xe99c;&#xeb92;</span>人想看
+                                    </div>
+                                    <div class="movie-detail movie-detail-strong movie-presale">
+                                        <a class="movie-presale-sep">预告片
+                                        </a><a href="/cinemas?movieId=1302980"
+                                               class="active" target="_blank" data-act="presaleUpcomingMovie-click"
+                                               data-val="{movieid:1302980}">预 售</a>
+                                    </div>
+                                    <div class="movie-ver"></div>
+                                </div>
+                                <div class="movie-detail movie-rt">7月22日上映</div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1490501" target="_blank" data-act="upcomingMovie-click"
+                                       data-val="{movieid:1490501}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386d7dddf2ac9fd338f481622dfa1f7ef0.jpg?imageView2/1/w/160/h/220"
+                                                 alt="青春季海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-title"
+                                                         title="青春季">青春季
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-wish">
+                                        <span class="stonefont">&#xe8d7;&#xe8d7;&#xe9ea;</span>人想看
+                                    </div>
+                                    <div class="movie-detail movie-detail-strong movie-presale">
+                                        <a class="movie-presale-sep">预告片
+                                        </a><a data-act="presaleUpcomingMovie-click" data-val="{movieid:1490501}">预
+                                        售</a>
+                                    </div>
+                                    <div class="movie-ver"></div>
+                                </div>
+                                <div class="movie-detail movie-rt">7月22日上映</div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1439161" target="_blank" data-act="upcomingMovie-click"
+                                       data-val="{movieid:1439161}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386d7339c7e67cb0faf9bedc32e9d0892b.jpg?imageView2/1/w/160/h/220"
+                                                 alt="热烈海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-title"
+                                                         title="热烈">热烈
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-wish">
+                                        <span class="stonefont">&#xecdc;&#xf85e;&#xf7ff;&#xeb92;&#xe99c;&#xe99c;</span>人想看
+                                    </div>
+                                    <div class="movie-detail movie-detail-strong movie-presale">
+                                        <a class="movie-presale-sep">预告片
+                                        </a><a data-act="presaleUpcomingMovie-click" data-val="{movieid:1439161}">预
+                                        售</a>
+                                    </div>
+                                    <div class="movie-ver"></div>
+                                </div>
+                                <div class="movie-detail movie-rt">7月28日上映</div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/1283734" target="_blank" data-act="upcomingMovie-click"
+                                       data-val="{movieid:1283734}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/fb7386d72ff923f2aa57e281410220c914768.jpg?imageView2/1/w/160/h/220"
+                                                 alt="恶世之子海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-title"
+                                                         title="恶世之子">恶世之子
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-detail movie-wish">
+                                        <span class="stonefont">&#xf85e;&#xecdc;&#xe9ea;&#xe9ea;</span>人想看
+                                    </div>
+                                    <div class="movie-detail movie-detail-strong movie-presale">
+                                        <a class="movie-presale-sep">预告片
+                                        </a><a data-act="presaleUpcomingMovie-click" data-val="{movieid:1283734}">预
+                                        售</a>
+                                    </div>
+                                    <div class="movie-ver"></div>
+                                </div>
+                                <div class="movie-detail movie-rt">7月28日上映</div>
+                        </dl>
+                    </div>
+                </div>
+
+                <!--热播电影-->
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-more">
+                            <a href="/films?isPlay=1&showType=3" class="textcolor_red" data-act="all-hotMovie-click">
+                                <span>全部</span>
+                            </a>
+                            <span class="panel-arrow panel-arrow-red"></span>
+                        </span>
+                        <span class="panel-title">
+                            <span class="textcolor_red"><h2>热播电影</h2></span>
+                        </span>
+                        <span class="panel-subtitle">
+                            <a href="/films?isPlay=1&catId=3&showType=3" data-act="tag-hotMovie-click" data-val="{TagName:'爱情'}">爱情</a>
+                        </span>
+                        <span class="panel-subtitle">
+                            <a href="/films?isPlay=1&catId=2&showType=3" data-act="tag-hotMovie-click" data-val="{TagName:'喜剧'}">喜剧</a>
+                        </span>
+                        <span class="panel-subtitle">
+                        <a href="/films?isPlay=1&catId=5&showType=3" data-act="tag-hotMovie-click" data-val="{TagName:'动作'}">动作</a>
+                        </span>
+                        <span class="panel-subtitle">
+                            <a href="/films?isPlay=1&catId=6&showType=3" data-act="tag-hotMovie-click" data-val="{TagName:'恐怖'}">恐怖</a>
+                        </span>
+                        <span class="panel-subtitle">
+                            <a href="/films?isPlay=1&catId=4&showType=3" data-act="tag-hotMovie-click" data-val="{TagName:'动画'}">动画</a>
+                        </span>
+                    </div>
+                    <div class="panel-content">
+                        <dl class="movie-list">
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/246292" target="_blank" data-act="hotMovie-click"
+                                       data-val="{movieid:246292}">
+                                        <div class="movie-poster movie-poster-long">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p1.meituan.net/movie/367cd31bccddd3c84f11bd37e6ca41f771479.jpg@350w_220h_1e_1c"
+                                                 alt="何以笙箫默海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">5.</i><i class="fraction">4</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="何以笙箫默">何以笙箫默
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-ver"></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/48742" target="_blank" data-act="hotMovie-click"
+                                       data-val="{movieid:48742}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/d2dad592b122ff9ab4cbae04c25297dac0db6.jpg?imageView2/1/w/160/h/220"
+                                                 alt="厉鬼将映海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">7.</i><i class="fraction">2</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="厉鬼将映">厉鬼将映
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-ver"></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/78326" target="_blank" data-act="hotMovie-click"
+                                       data-val="{movieid:78326}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/d2dad592b125bfe5bc9ab42e5aabc6cf63cd8.webp?imageView2/1/w/160/h/220"
+                                                 alt="5月天诺亚方舟海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">9.</i><i class="fraction">4</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="5月天诺亚方舟">5月天诺亚方舟
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-ver"><i class="m3d"></i></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/247300" target="_blank" data-act="hotMovie-click"
+                                       data-val="{movieid:247300}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/d2dad592b12f2a030c030cc45d1917ed1b610.jpg?imageView2/1/w/160/h/220"
+                                                 alt="唐人街探案海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">9.</i><i class="fraction">0</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="唐人街探案">唐人街探案
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-ver"></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/78304" target="_blank" data-act="hotMovie-click"
+                                       data-val="{movieid:78304}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/d2dad592b125bfc9fd1789337993cec80ab62.jpg?imageView2/1/w/160/h/220"
+                                                 alt="战狼海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">9.</i><i class="fraction">3</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="战狼">战狼
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-ver"><i class="m3d"></i></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/247791" target="_blank" data-act="hotMovie-click"
+                                       data-val="{movieid:247791}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/d2dad592b12f2a7a35be2ae18dfdc12385a01.jpg?imageView2/1/w/160/h/220"
+                                                 alt="恐怖直播海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">8.</i><i class="fraction">7</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="恐怖直播">恐怖直播
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-ver"></div>
+                                </div>
+
+                            <dd>
+                                <div class="movie-item">
+                                    <a href="/films/246082" target="_blank" data-act="hotMovie-click"
+                                       data-val="{movieid:246082}">
+                                        <div class="movie-poster">
+                                            <img class="poster-default"
+                                                 src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/image/loading_2.e3d934bf.png"/>
+                                            <img class="movie-poster-img"
+                                                 data-src="https://p0.pipi.cn/mmdb/d2dad592b12f2ab12d339e7ef5bd56a01e21d.jpg?imageView2/1/w/160/h/220"
+                                                 alt="夏洛特烦恼海报封面"/>
+                                            <div class="movie-overlay movie-overlay-bg">
+                                                <div class="movie-info">
+                                                    <div class="movie-score">
+                                                        <i class="integer">9.</i><i class="fraction">3</i>
+                                                    </div>
+                                                    <div class="movie-title movie-title-padding"
+                                                         title="夏洛特烦恼">夏洛特烦恼
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="movie-ver"></div>
+                                </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+        src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/common.4ef59765.js"></script>
+<script crossorigin="anonymous"
+        src="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/home-index.535beb8a.js"></script>
+<script src="//lx.meituan.net/lx.js" type="text/javascript" charset="utf-8" async></script>
+</body>
+</html>
